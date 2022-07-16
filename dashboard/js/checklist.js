@@ -76,7 +76,7 @@ window.addEventListener('DOMContentLoaded', () => {
 
     function reset() {
         let data = [];
-        for (let i = 1; i <= 11; i++) {
+        for (let i = 1; i <= hostChecklistItems; i++) {
             let checkbox = document.getElementById("checkbox-"+i);
             checkbox.checked = false;
             let listItem = document.getElementById("list-item-"+i)
