@@ -8,9 +8,6 @@ window.addEventListener('DOMContentLoaded', () => {
 
     NodeCG.waitForReplicants(hostChecklistItems).then(() => {
         for (let dataID in hostChecklistItems.value) {
-            console.log(dataID);
-            console.log(hostChecklistItems.value);
-            console.log(hostChecklistItems.value[dataID]);
             let checkbox = document.getElementById("checkbox-"+hostChecklistItems.value[dataID]["id"]);
             let listItem = document.getElementById("list-item-"+hostChecklistItems.value[dataID]["id"]);
             checkbox.checked = hostChecklistItems.value[dataID]["checked"];
@@ -76,7 +73,7 @@ window.addEventListener('DOMContentLoaded', () => {
 
     function reset() {
         let data = [];
-        for (let i = 1; i <= hostChecklistItems; i++) {
+        for (let i = 1; i <= amountOfCheckboxes; i++) {
             let checkbox = document.getElementById("checkbox-"+i);
             checkbox.checked = false;
             let listItem = document.getElementById("list-item-"+i)
